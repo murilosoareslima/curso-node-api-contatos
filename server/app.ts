@@ -36,13 +36,13 @@ class App {
         .get((req, res) => {this.controller.selectOne(req, res)});
 
         this.app.route('/api/contatos/:id')
-        .delete((req, res) => this.controller.delete(req, res));
+        .delete((req, res) => {this.controller.delete(req, res)});
 
         this.app.route('/api/contatos/:id')
-        .put((req, res) => this.controller.update(req, res));
+        .put((req, res) => {this.controller.update(req, res)});
 
         this.app.route('/api/contatos')
-        .post((req, res) => this.controller.insert(req, res));
+        .post((req, res) => {this.controller.insert(req, res)});
     }
 
     //nome padrao que utilizam para adicionar no express

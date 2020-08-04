@@ -38,7 +38,7 @@ class Controller{
     }
 
     updateByID(id, data) {
-        return model.findOneAndUpdate(id, data);
+        return model.findOneAndUpdate(id, data).then(() => this.getContatoByID(id));
     }
 
     update(req, res) {
